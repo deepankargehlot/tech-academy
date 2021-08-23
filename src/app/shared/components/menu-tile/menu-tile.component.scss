@@ -1,0 +1,30 @@
+
+$primary: #503E9D;
+$seconday: #FFFFFF;
+$tertiary: #F7F7F7;
+$title: #182135;
+$black:#000000;
+
+
+.menu {
+    width: 100%;
+    .img {
+        height: 175px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    .info {
+        margin-top: 1em;
+    }
+    .title {
+        font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+color: $title;
+    }
+    .price {
+        
+    }
+}

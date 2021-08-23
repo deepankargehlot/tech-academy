@@ -1,0 +1,13 @@
+<div class="menu">
+    <div class="menu-filter">
+
+    </div>
+    <div class="menu-title">
+
+    </div>
+    <div class="d-flex flex-wrap flex-row  justify-content-center menu-items" style="width: 100%;">
+        <div *ngFor=" let restaurant of menuItems " class="res" >
+            <app-menu-tile [menuItem]="restaurant"></app-menu-tile>
+        </div>
+    </div>
+</div>

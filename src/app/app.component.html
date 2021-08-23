@@ -1,0 +1,104 @@
+<ng-sidebar-container>
+
+  <!-- A sidebar -->
+  <!-- @TO-DO add the sidebar in a seprate component -->
+  <ng-sidebar #sidebar [(opened)]="sidebarOpened" mode="push">
+    <div class="sidebar">
+      <div>
+        <div class="d-flex  logo align-items-center">
+          <img src="assets/img/icons/logo.png" width="42px" height="21px">
+          <div class="logo-text">
+            Pomo & co
+          </div>
+        </div>
+        <div class="nav-items">
+          <div class="nav-item d-flex align-items-center" *ngFor="let item of items" [routerLink]="item.navigateTo"
+            routerLinkActive="t">
+            <!-- <svg >
+                <use [attr.href]="item.image" width="100%" height="100%" />
+              </svg> -->
+            <img [src]="item.image" width="24px" height="24px">
+            <div class="nav-item-text">
+              {{item.name}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content class="">
+    <header class="demo-header d-flex flex-row justify-content-between">
+      <div class="toggle">
+        <button *ngIf="!sidebarOpened" (click)="toggleSidebar()" class="demo-header__toggle">Toggle sidebar</button>
+        <button *ngIf="sidebarOpened" (click)="toggleSidebar()" class="demo-header__toggle">Toggle sidebar</button>
+      </div>
+      <div class="d-flex">
+        <div class="filter" (click)="toggleFilterSidebar()">
+          <img src="assets/img/icons/filter.png" width="20px" height="20px">
+        </div>
+        <div class="cart ms-3">
+          <img src="assets/img/icons/cart.png" width="20px" height="20px">
+        </div>
+      </div>
+
+    </header>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- @TO-DO add the sidebar in a seprate component -->
+  <ng-sidebar #filterSidebar [(opened)]="filterSidebarOpened" mode="over" position="right" [showBackdrop]="true">
+    <div class="filter-sidebar">
+      <div>
+        <div class="d-flex  title justify-content-between align-items-center">
+          Search filters
+          <div class="close" (click)="closeFilterSidebar()">
+            <img src="assets/img/icons/close.png" width="16px" height="16px">
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+          <div class="sort">
+            <div class="title">
+              Sort by
+            </div>
+            <div class="body d-flex flex-wrap flex-row">
+              <div *ngFor="let item of sortBy " class="item" (click)="toggleSort(item)"
+                [ngClass]="selectedSortBy === item ? 'selected' : '' ">
+
+                {{item}}
+              </div>
+            </div>
+            <div class="cuisine">
+              <div class="title">
+                Cuisine
+              </div>
+              <div class="body d-flex flex-wrap flex-row ">
+                <div *ngFor="let item of cuisine" class="cuisine-item" (click)="toggleCuisine(item)"
+                  [ngClass]="selecetdCuisine.includes(item) ? 'selected' : '' ">
+                  {{item}}
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div>
+                see more
+              </div>
+              <div>
+                icon
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="apply">Apply Filters</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ng-sidebar>
+
+</ng-sidebar-container>

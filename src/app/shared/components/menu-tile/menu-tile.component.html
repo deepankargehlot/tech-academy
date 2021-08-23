@@ -1,0 +1,13 @@
+<div class="d-flex flex-column menu">
+    <div class="img">
+        <img [src]="menuItem.itemPhoto" width="100%" height="100%">
+    </div>
+    <div class=" d-flex flex-row justify-content-between info">
+        <div class="title">
+            {{menuItem.itemName}}
+        </div>
+        <div class="price" >
+            {{menuItem.itemCost | currency:'INR'}}
+        </div>
+    </div>
+</div>

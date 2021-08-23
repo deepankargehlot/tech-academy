@@ -1,0 +1,78 @@
+
+$primary: #503E9D;
+$seconday: #FFFFFF;
+$tertiary: #F7F7F7;
+$title: #182135;
+$black:#000000;
+
+
+.restaurant {
+    width: 100%;
+    .img {
+        height: 175px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    .info {
+        margin-top: 1em;
+    }
+    .title {
+        font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+color: $title;
+    }
+    .status {
+        flex-direction: row;
+align-items: center;
+padding: 4px 8px;
+
+// width: 73px;
+// height: 24px;
+border-radius: 4px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 16px;
+
+    }
+    .open {
+
+color: #503E9D;
+        background-color: rgba(80, 62, 157, 0.1);
+    }
+    .close {
+        color: #FB6D3A;
+        background: rgba(251, 109, 58, 0.1);
+    }
+    .description {
+        margin-top: 1em;
+        font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+overflow:hidden;
+position: relative;
+font-size: 12px;
+line-height: 18px;
+max-height: 54px;
+color: $black;
+    }
+}
+
+.description::before {
+    position: absolute;
+    content: "...";
+    inset-block-end: 0; /* "bottom" */
+    inset-inline-end: 0; /* "right" */
+  }
+  .description::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; /* "right" */
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }

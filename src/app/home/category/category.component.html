@@ -1,0 +1,11 @@
+<div class="category">
+    <div class="title">
+        Category
+    </div>
+    <div class="body d-flex flex-wrap flex-row ">
+      <div *ngFor="let item of categories" class="category-item"  (click)="toggleCategory(item)"
+       [ngClass]="selecetdCategories.includes(item) ? 'selected' : '' " >
+        {{item}}
+      </div>
+    </div>
+  </div>

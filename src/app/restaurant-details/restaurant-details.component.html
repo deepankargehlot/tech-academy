@@ -1,0 +1,35 @@
+<div class="col">
+    <div class="row">
+        <div class="col-lg-6" >
+            <div class="d-flex flex-column res-info">
+                <div class="name">
+                    {{resstaurantInfo?.restaurantName}}
+                </div>
+                <div class="description">
+                    {{resstaurantInfo?.restaurantDescription}}
+                </div>
+                <div class="more-info">
+                    <div class="timings"> 
+                        {{resstaurantInfo?.openingHours}}
+                    </div>
+                    <div class="contact">
+                        {{resstaurantInfo?.contactNumber}}
+                    </div>
+                    <div class="website">
+                        <a [href]="resstaurantInfo?.websiteUrl">
+                        {{resstaurantInfo?.websiteUrl}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="img">
+                <img [src]="resstaurantInfo?.restaurantImage" width="100%" height="100%">
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <app-menu-items></app-menu-items>
+    </div>
+</div>

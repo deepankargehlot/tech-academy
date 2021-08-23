@@ -1,0 +1,252 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: #503E9D;
+$seconday: #FFFFFF;
+$tertiary: #F7F7F7;
+
+ng-sidebar-container {
+    height: 100vh;
+
+}
+
+ng-sidebar { 
+    div.sidebar {
+        padding: 16px;
+        max-width: 300px;
+        background-color: $tertiary;
+        height: 100%;
+        border-radius: 0px 24px 24px 0px;
+        div.logo {
+            margin: 16px;
+            div.logo-text {
+                margin-left: 8px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 24px;
+                /* identical to box height, or 133% */
+                /* Colors/Dark/#2D2D2D/100% */
+                color: #2D2D2D;
+            }
+        }
+        div.nav-items {
+            div.nav-item {
+                min-width: 275px;
+                padding: 16px;
+                div.nav-item-text {
+                    margin-left: 24px;
+                }
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            div.nav-item:active {
+                background-color: $primary;
+            }
+            div.nav-item.t {
+                background-color: $primary;
+                border-radius: 12px;
+                color: white;
+            }
+        }
+    }
+    
+}
+
+ng-sidebar { 
+    div.filter-sidebar {
+        padding: 32px;
+        max-width: 300px;
+        background-color: white;
+        height: 100%;
+        min-width: 480px;
+        border-radius: 24px 0px 0px 24px;
+
+        .title {
+
+            font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+/* Colors/Text/Dark/#182135/100% */
+
+color: #182135;
+
+            .close {
+                /* Colors/Gray/#F7F7F7/100% */
+
+background: #F7F7F7;
+cursor: pointer;
+border-radius: 10px;
+                img {
+                    margin: 16px;
+                }
+            }
+        }
+        .sort {
+            padding-top: 50px;
+            .title {
+                font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+/* Colors/Text/Dark/#182135/100% */
+
+color: #182135;
+
+            }
+            .body {
+                margin-top: 32px;
+                .item {
+                    border-radius: 6px;
+/* Text/Body/Normal/Regular */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+/* Colors/Text/Dark/#626264/100% */
+
+color: #626264;
+min-width: 75px;
+padding: 12px 8px;
+margin: 8px;
+
+                    color: #FB6D3A;
+
+cursor:pointer;
+                }
+                .selected {
+                    background: rgba(251, 109, 58, 0.1);
+                }
+            }
+
+        }
+        .cuisine {
+            padding-top: 50px;
+            .title {
+                font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+/* Colors/Text/Dark/#182135/100% */
+
+color: #182135;
+
+            }
+            .body {
+                margin-top: 16px;
+                .cuisine-item {
+                    background: #F7F7F7;
+border-radius: 6px;
+/* Text/Body/Normal/Regular */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+/* Colors/Text/Dark/#626264/100% */
+
+color: #626264;
+min-width: 75px;
+padding: 12px 8px;
+margin: 8px;
+cursor:pointer;
+                }
+                .selected {
+                    background: rgba(251, 109, 58, 0.1);
+                    color: #FB6D3A;
+                }
+            }
+
+        }
+    }
+
+    
+}
+div[ng-sidebar-content] {
+    background: #FFFFFF;
+    min-height: 100vh;
+    .demo-header {
+        align-items: center;
+        background-color: #FFFFFF;
+        color: #000;
+        display: flex;
+        padding: 2em;
+        position: sticky;
+        top: 0;
+        .toggle {
+            background: #503E9D;
+border-radius: 10px;
+padding: 16px;
+        }
+        .filter {
+            background: #503E9D;
+            cursor: pointer;
+border-radius: 10px;
+            img {
+                margin: 14px;
+            }
+        }
+        .cart {
+            background: #FB6D3A;
+border-radius: 10px;
+            img {
+                margin: 14px;
+            }
+            
+        }
+      }
+    .main-content {
+        width: 100%;
+        padding: 1em 2em;
+    }
+}
+
+
+
+.demo-header__toggle {
+    background: transparent;
+    border: 0.15rem solid #fff;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+    font-size: 0;
+    height: 1.5rem;
+    position: relative;
+    width: 2rem;
+  }
+    .demo-header__toggle:after {
+      background: #fff;
+      content: '';
+      height: 0.15rem;
+      left: 0;
+      margin-top: -0.075rem;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }

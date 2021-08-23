@@ -1,0 +1,16 @@
+<div class="d-flex flex-column restaurant">
+    <div class="img">
+        <img [src]="restaurant.restaurantImage" width="100%" height="100%">
+    </div>
+    <div class=" d-flex flex-row justify-content-between info">
+        <div class="title">
+            {{restaurant.restaurantName}}
+        </div>
+        <div class="status" [ngClass]="restaurant.isOpen ? 'open' : 'close' " >
+            {{restaurant.isOpen ? 'Open Now' : 'Closed'}}
+        </div>
+    </div>
+    <div class="description">
+        {{restaurant.restaurantDescription}}
+    </div>
+</div>
