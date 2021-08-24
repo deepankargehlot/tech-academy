@@ -1,0 +1,1 @@
+(self.webpackChunktech_academy=self.webpackChunktech_academy||[]).push([[592],{466:(e,c,t)=>{"use strict";t.d(c,{m:()=>s});var a=t(583),n=t(639);let s=(()=>{class e{}return e.\u0275fac=function(c){return new(c||e)},e.\u0275mod=n.oAB({type:e}),e.\u0275inj=n.cJS({imports:[[a.ez]]}),e})()}}]);
